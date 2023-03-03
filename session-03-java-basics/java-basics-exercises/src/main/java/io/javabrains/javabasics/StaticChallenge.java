@@ -12,7 +12,42 @@ Create a class `Rectangle` with the following attributes: `width`, `height`, and
 
 public class StaticChallenge {
 
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
+        Rectangle rectangle1 = new Rectangle(10, 20);
+        Rectangle rectangle2 = new Rectangle(30, 44);
+        Rectangle rectangle3 = new Rectangle(50, 20);
+        System.out.println("rectangle1 area "+rectangle1.getArea());
+        System.out.println("rectangle1 area "+rectangle1.getPerimeter());
+        System.out.println("rectangle2 area "+rectangle2.getArea());
+        System.out.println("rectangle2 area "+rectangle2.getPerimeter());
+        System.out.println("rectangle3 area "+rectangle3.getArea());
+        System.out.println("rectangle3 area "+rectangle3.getPerimeter());
+        System.out.println("Total number of rectangles created "+Rectangle.getNumOfRectangle());
+
+    }
+}
+
+class Rectangle {
+    private double width;
+    private double height;
+    private static int numOfRectangle;
+
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
+        Rectangle.numOfRectangle++;
+    }
+
+    public double getArea() {
+        return this.width * this.height;
+    }
+
+    public double getPerimeter() {
+        return 2 * (this.width + this.height);
+    }
+
+    public static int getNumOfRectangle() {
+        return numOfRectangle;
     }
 }

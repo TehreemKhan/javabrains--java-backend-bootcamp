@@ -12,9 +12,90 @@ package io.javabrains.javabasics;
  */
 
 
+class Animal {
+    private String name;
+    private int age;
+
+    public Animal(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String makeSound() {
+        return "Animal Sound";
+    }
+
+    @Override
+    public String toString() {
+        return "Animal " + "name= " + name + " age= " + age + " Sound= " + this.makeSound();
+    }
+}
+
+
+class Dog extends Animal {
+    private String breed;
+
+    public Dog(String name, int age, String breed) {
+        super(name, age);
+        this.breed = breed;
+    }
+
+    @Override
+    public String makeSound() {
+        return "The dog barks";
+    }
+
+    @Override
+    public String toString() {
+        return "Dog " + "name= " + super.getName() + " age= " + super.getAge() + " Sound= " + this.makeSound();
+    }
+}
+
+class Cat extends Animal {
+    private int lives;
+
+    public Cat(String name, int age, int lives) {
+        super(name, age);
+        this.lives = lives;
+    }
+
+    @Override
+    public String makeSound() {
+        return "The cat meows";
+    }
+
+    public String toString() {
+        return "Cat " + "name= " + super.getName() + " age= " + super.getAge() + " Sound= " + this.makeSound();
+    }
+}
+
+
 public class InheritanceChallenge {
 
     public static void main(String[] args) {
+        Animal[] animals = {new Animal("Lion", 5), new Dog("Dog", 3, "Golder Retriver"), new Cat("Cat", 1, 9), new Animal("Elephant", 10)};
+        for (Animal animal : animals) {
+            System.out.println(animal);
+
+
+        }
+
 
     }
 }
