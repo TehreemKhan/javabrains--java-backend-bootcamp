@@ -14,19 +14,11 @@ The program should display a menu of options, and the user should be able to sel
 The program should continue to display the menu and allow the user to perform operations until they choose to quit.
 */
 
-<<<<<<< HEAD:session-04-java-collections/java-collections-exercises/src/main/java/io/javabrains/javacollections/ListHomework.java
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
-
-=======
 public class ListHomework1 {
->>>>>>> origin/main:session-04-java-collections/java-collections-exercises/src/main/java/io/javabrains/javacollections/ListHomework1.java
-
-public class ListHomework {
-    private static List<Integer> list;
-
     public static List<Integer> getList() {
         List<Integer> list = new ArrayList<>();
         list.add(10);
@@ -38,7 +30,7 @@ public class ListHomework {
     }
 
     public static void main(String[] args) {
-        List<Integer> list = ListHomework.getList();
+        List<Integer> list = ListHomework1.getList();
         Scanner input = new Scanner(System.in);
         while (true) {
             System.out.println("\n");
