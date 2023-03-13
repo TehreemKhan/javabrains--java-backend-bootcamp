@@ -5,8 +5,11 @@ Print the list in forward and reverse order using iterators only
 */
 
 import java.util.ArrayList;
+<<<<<<< HEAD
 import java.util.Iterator;
 import java.util.ListIterator;
+=======
+>>>>>>> origin/main
 
 public class ListIteratorExercise {
 

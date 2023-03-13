@@ -23,4 +23,5 @@ public class ListExercise {
         }
         System.out.println("sum = " + sum);
     }
+
 }
