@@ -41,3 +41,5 @@ public class JavaVariables {
         System.out.println("b = " + b);
     }
 }
+
+//checked
