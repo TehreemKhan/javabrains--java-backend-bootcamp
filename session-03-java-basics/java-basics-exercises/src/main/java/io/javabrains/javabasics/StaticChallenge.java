@@ -51,3 +51,5 @@ class Rectangle {
         return numOfRectangle;
     }
 }
+
+//checked
