@@ -1,36 +1,46 @@
 package io.javabrains.javacollections;
 
-import java.util.Collection;
-import java.util.Set;
-import java.util.SortedSet;
+import java.util.*;
 
 // Implement the VocabularyWordManager using a SortedSet internally
 
 public class VocabularyWordManager {
 
+    private SortedSet<String> set;
+
+
+    public SortedSet<String> getSet() {
+        return set;
+    }
+
     public VocabularyWordManager(Collection<String> words) {
-        throw new RuntimeException("Not implemented");
+//        throw new RuntimeException("Not implemented");
+        this.set = new TreeSet<>(words);
     }
 
     public String getFirstWord() {
-        throw new RuntimeException("Not implemented");
+//        throw new RuntimeException("Not implemented");
+        return this.set.first();
     }
 
     public String getLastWord() {
-        throw new RuntimeException("Not implemented");
-
+//        throw new RuntimeException("Not implemented");
+        return this.set.last();
     }
 
     public SortedSet<String> getWordsBefore(String word) {
-        throw new RuntimeException("Not implemented");
+//        throw new RuntimeException("Not implemented");
+        return this.set.headSet(word);
     }
 
     public SortedSet<String> getWordsAfter(String word) {
-        throw new RuntimeException("Not implemented");
+//        throw new RuntimeException("Not implemented");
+        return this.set.tailSet(word);
     }
 
     public SortedSet<String> getWordsBetween(String startWord, String endWord) {
-        throw new RuntimeException("Not implemented");
+//        throw new RuntimeException("Not implemented");
+        return this.set.subSet(startWord, endWord);
     }
 
     public static void main(String[] args) {
@@ -44,6 +54,7 @@ public class VocabularyWordManager {
                         "grape",
                         "honey"));
 
+        System.out.println("Set = " + vocab.getSet());
         System.out.println("First word: " + vocab.getFirstWord());
         System.out.println("Last word: " + vocab.getLastWord());
 

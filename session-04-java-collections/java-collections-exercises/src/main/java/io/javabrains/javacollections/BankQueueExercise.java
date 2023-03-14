@@ -3,31 +3,47 @@ package io.javabrains.javacollections;
 // Implement the BankQueue class and methods. Look at the main method
 // for clues on what the methods need to do
 
+import java.util.List;
+import java.util.PriorityQueue;
+import java.util.Queue;
+
 class BankQueue {
+    private Queue<String> queue;
+
+    public BankQueue() {
+        this.queue = new PriorityQueue<>();
+    }
 
     public void addCustomer(String customerName) {
-        throw new RuntimeException("Not implemented");
+//        throw new RuntimeException("Not implemented");
+        this.queue.add(customerName);
     }
 
     //
     public String removeNextCustomer() {
-        throw new RuntimeException("Not implemented");
+//        throw new RuntimeException("Not implemented");
+        return this.queue.poll();
     }
 
     public int getNumCustomers() {
-        throw new RuntimeException("Not implemented");
+//        throw new RuntimeException("Not implemented");
+        return this.queue.size();
     }
 
     public String peekNextCustomer() {
-        throw new RuntimeException("Not implemented");
+//        throw new RuntimeException("Not implemented");
+        return this.queue.peek();
     }
 
     public String peekLastCustomer() {
-        throw new RuntimeException("Not implemented");
+//        throw new RuntimeException("Not implemented");
+       List<String> list = this.queue.stream().toList();
+       return list.get(list.size()-1);
     }
 
     public void displayCustomers() {
-        throw new RuntimeException("Not implemented");
+//        throw new RuntimeException("Not implemented");
+        System.out.println("queue = " + queue);
     }
 }
 
